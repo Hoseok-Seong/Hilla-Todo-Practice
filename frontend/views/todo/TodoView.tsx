@@ -1,9 +1,16 @@
+import type Todo from 'Frontend/generated/com/example/application/Todo';
+import { useEffect, useState } from 'react';
+import { FormikErrors, useFormik } from 'formik';
+import { Button } from '@hilla/react-components/Button.js';
+import { Checkbox } from '@hilla/react-components/Checkbox.js';
+import { TextField } from '@hilla/react-components/TextField.js';
+import { TodoEndpoint } from 'Frontend/generated/endpoints';
+import { EndpointValidationError } from '@hilla/frontend';
+
 export default function TodoView() {
-  return (
-    <div className="flex flex-col h-full items-center justify-center p-l text-center box-border">
-      <img style={{ width: '200px' }} src="images/empty-plant.png" />
-      <h2>This place intentionally left empty</h2>
-      <p>It’s a place where you can grow your own UI 🤗</p>
-    </div>
-  );
+    const empty: Todo = { task: '', done: false };
+    const [todos, setTodos] = useState(Array<Todo>());
+
+    return (
+    );
 }
